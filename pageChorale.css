@@ -1,0 +1,385 @@
+:root {
+  --bleu: #0a3d55;
+  --or: #c9973a;
+  --creme: #fdf8f0;
+  --bordeaux: #6b1a2a;
+  --blanc: #ffffff;
+  --texte: #1a1a1a;
+  --fond: #081e30;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(201,151,58,0.15), transparent 35%),
+    linear-gradient(180deg, #0a3d55 0%, #081e30 100%);
+  color: var(--creme);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.35rem 1rem 0.35rem;
+  background: rgba(10, 61, 85, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.22);
+  z-index: 1000;
+}
+
+.logo-chorale {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-chorale img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--creme);
+  text-decoration: none;
+  padding: 0.55rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--or);
+  transform: translateY(-1px);
+}
+
+main {
+  padding: 120px 1.25rem 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 1.8rem;
+  padding: 1.9rem 1.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.2rem;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  color: var(--bleu);
+  background: var(--or);
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+  background: rgba(201, 151, 58, 0.9);
+  transform: translateY(-1px);
+}
+
+.note {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.95rem;
+}
+
+.links-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 0;
+}
+
+.links-list ul li {
+  margin-bottom: 0.65rem;
+}
+
+.links-list a {
+  color: var(--creme);
+  text-decoration: underline;
+}
+
+.hero {
+  background: rgba(255, 255, 255, 0.12);
+  text-align: center;
+  border-left: 4px solid var(--or);
+  padding: 2rem 1.5rem;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  color: var(--blanc);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.hero p {
+  margin: 0;
+  color: #f3ead9;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.9;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  color: var(--or);
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--or);
+  margin-top: 0.7rem;
+  border-radius: 3px;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  color: var(--creme);
+  font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+}
+
+p,
+li {
+  color: var(--creme);
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.cards article {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.grid-list {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.highlight {
+  background: rgba(201, 151, 58, 0.12);
+  border-color: rgba(201, 151, 58, 0.2);
+}
+
+.pin-note {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.pin-note h3 {
+  margin-top: 1rem;
+}
+
+section#contact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section#contact ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.2rem 1rem;
+  color: #f5e7d9;
+  background: rgba(10, 61, 85, 0.95);
+  border-top: 3px solid var(--or);
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 110px 1rem 1.5rem;
+  }
+
+  .cards,
+  .grid-list {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 1.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem 0.9rem 0.4rem;
+  }
+
+  .logo-chorale {
+    margin-bottom: 0.6rem;
+    margin-right: auto;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 0.35rem;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 1.75rem 1.2rem;
+  }
+
+  section {
+    padding: 1.4rem 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 100px 0.9rem 1.2rem;
+  }
+
+  header {
+    padding: 0.45rem 0.8rem 0.35rem;
+  }
+
+  .logo-chorale {
+    width: 52px;
+    height: 52px;
+  }
+
+  nav ul {
+    gap: 0.3rem;
+  }
+
+  nav ul li a {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .hero p {
+    font-size: 0.96rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header {
+    padding: 0.35rem 0.75rem 0.3rem;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+  }
+
+  nav ul li a {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    padding: 1.4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  section {
+    border-radius: 1rem;
+  }
+
+  .cards article {
+    padding: 0.95rem;
+  }
+}

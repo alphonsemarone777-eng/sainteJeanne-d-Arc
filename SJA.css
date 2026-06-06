@@ -815,19 +815,52 @@ mark {
    RESPONSIVE — TABLETTE (max 900px)
    ============================================= */
 @media (max-width: 900px) {
-  .groupcard {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sacrements-body {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   body {
     padding-top: 110px;
   }
 
-  
+  header nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  header nav ul li {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .groupcard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sacrements-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tags,
+  .projets .tags {
+    justify-content: flex-start;
+  }
+
+  .mouvements .tags {
+    justify-content: flex-start;
+  }
+
+  .projets .container,
+  .paroisse .container,
+  .sacrements .container,
+  .group-schedule,
+  .mouvements,
+  .suivre,
+  .contact {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .details .det {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =============================================
@@ -895,15 +928,42 @@ mark {
    ============================================= */
 @media (max-width: 380px) {
   header nav ul li a {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     padding: 2px 4px;
   }
 
   body {
     padding-top: 130px;
   }
-  
+
+  .present h1 {
+    font-size: 1.1rem;
+  }
+
+  .projets .intro,
+  .projects .container p,
+  .paroisse p,
+  .note-importante,
+  .citation,
+  .mouvements-titre {
+    font-size: 0.95rem;
+  }
 }
+
+@media (max-width: 320px) {
+  header nav ul {
+    gap: 2px;
+    padding: 4px 6px 6px;
+  }
+
+  .tag,
+  .card,
+  .sacrements .card,
+  .group-schedule p {
+    padding: 10px 12px;
+  }
+}
+
 .details{
   display: grid;
   grid-template-columns: 1fr;

@@ -331,8 +331,33 @@ blockquote {
    RESPONSIVE — TABLETTE (max 900px)
    ============================================= */
 @media (max-width: 900px) {
+  body {
+    padding-top: 130px;
+  }
+
+  .images {
+    width: 96%;
+    height: 240px;
+  }
+
   .ula {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .lia {
+    padding: 0.9em 0.35em;
+  }
+
+  header nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 8px 8px;
+    gap: 6px;
+  }
+
+  header nav ul li {
+    flex: 0 0 auto;
   }
 }
 
@@ -341,12 +366,12 @@ blockquote {
    ============================================= */
 @media (max-width: 600px) {
   body {
-    padding-top: 110px;
+    padding-top: 130px;
   }
 
   header h1 {
-    font-size: 0.9rem;
-    padding: 6px 6px 2px;
+    font-size: 1rem;
+    padding: 8px 8px 4px;
   }
 
   header nav ul {
@@ -355,8 +380,8 @@ blockquote {
   }
 
   header nav ul li a {
-    font-size: 0.7rem;
-    padding: 3px 5px;
+    font-size: 0.82rem;
+    padding: 4px 6px;
   }
 
   .ula {
@@ -365,15 +390,15 @@ blockquote {
   }
 
   .lia {
-    padding: 0.5em 0.2em;
+    padding: 0.55em 0.3em;
   }
 
   .lia a {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   h5 {
@@ -382,6 +407,12 @@ blockquote {
 
   p {
     font-size: 0.95rem;
+  }
+
+  .button {
+    left: 5px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
   }
 }
 
@@ -403,13 +434,33 @@ blockquote {
    RESPONSIVE — TABLETTE (max 900px)
    ============================================= */
 @media (max-width: 900px) {
-  .ula {
-    grid-template-columns: repeat(2, 1fr);
+  body {
+    padding-top: 130px;
+  }
+
+  header nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 8px 8px;
+    gap: 6px;
+  }
+
+  header nav ul li {
+    flex: 0 0 auto;
   }
 
   .images {
     height: 220px;
     width: 96%;
+  }
+
+  .ula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .lia {
+    padding: 0.9em 0.35em;
   }
 }
 
@@ -417,8 +468,12 @@ blockquote {
    RESPONSIVE — MOBILE (max 600px)
    ============================================= */
 @media (max-width: 600px) {
+  body {
+    padding-top: 130px;
+  }
+
   header h1 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 8px 8px 4px;
   }
 
@@ -428,7 +483,7 @@ blockquote {
   }
 
   header nav ul li a {
-    font-size: 1.05rem;
+    font-size: 0.92rem;
     padding: 4px 6px;
   }
 
@@ -438,13 +493,17 @@ blockquote {
   }
 
   .ula {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: 1fr;
+    gap: 10px;
     padding: 10px 8px;
   }
 
+  .lia {
+    padding: 0.65em 0.35em;
+  }
+
   .lia a {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .images {
@@ -459,7 +518,7 @@ blockquote {
 
   p {
     padding: 12px 14px;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 
   .button {
@@ -474,11 +533,15 @@ blockquote {
    ============================================= */
 @media (max-width: 380px) {
   header nav ul li a {
-    font-size: 0.56rem;
+    font-size: 0.78rem;
     padding: 2px 4px;
   }
 
   .ula {
     grid-template-columns: 1fr;
+  }
+
+  .button {
+    display: none;
   }
 }
