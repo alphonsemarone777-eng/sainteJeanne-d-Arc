@@ -1,0 +1,208 @@
+:root {
+  --creme: #f8efe2;
+  --beige-chaud: #e3c18b;
+  --goldenrod: #c88f2d;
+  --terracotta: #a85d2b;
+  --bleu-ciel: #7f9db8;
+  --bordeaux: #6f2b1b;
+  --texte: #25180f;
+  --blanc: #fffdfa;
+}
+*{
+  margin: 0%;
+  padding: 0%;
+}
+body{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+}
+header{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(120deg,#e3c18b,#c88f2d,#a85d2b);
+}
+
+header .P{
+  display: flex;
+  flex-direction: column;
+  margin-left: -65%;
+  margin: 0;
+}
+header .logo{
+  width: 40%;
+  border-radius: 50%;
+  margin: 0;
+
+}
+header h1{
+text-align: center;
+font-weight: bold;
+font-size: clamp(1rem, 2.4vw, 1.3rem);
+color:#6f2b1b;
+margin: 0;
+margin-top: 1%;
+}
+header .header-sub{
+text-align: center;
+margin: 0;
+color: #013460;
+font-style: italic;
+font-weight: 650;
+}
+.navafterheader{
+margin: 0%;
+padding: 0%;
+width: 100%;
+height: 100%;
+background: linear-gradient(239deg,#6f2b1b 5% ,#c88f2d 50%,#a85d2b 45%);
+}
+
+.navafterheader ul{
+  margin: 0%;
+  margin-left: 3%;
+  
+  display: flex;
+  gap: 10px;
+  margin-right: 30%;
+/* display: grid;
+grid-template-columns: 1fr ; */
+}
+.navafterheader ul li{
+list-style-type: none;
+
+}
+.navafterheader ul li details summary{
+  text-align: center;
+  text-decoration: underline;
+
+}
+.navafterheader ul li details li {
+  text-align: center;
+  background: cadetblue;
+  border-radius: .6em;
+  margin-bottom: 3px;
+}.navafterheader ul li details li a{
+  
+  border-radius: .5em;
+}
+.navafterheader ul li a,
+summary {
+text-decoration: none;
+text-shadow: #013460 2px 2px 2px;
+font-weight: 600;
+color:var(--beige-chaud) ;
+}
+.navafterheader ul li details a:hover{
+  text-decoration: underline;
+  color: #013460;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.h1{
+  text-align: center;
+  background: linear-gradient(120deg,#e3c18b,#c88f2d,#a85d2b);
+  font-style: italic;
+  font-weight: 590;
+  margin-bottom: 0%;
+}
+.present{
+  background: linear-gradient(120deg,#c55911,#e2950e,#e3c18b);
+}
+/* @keyframes couleurchange{
+  0%{background-color: red;}
+  10%{background-color: orange;}
+  15%{background-color: red;}
+  20%{background-color: #e3c18b;}
+  40%{
+    background-color: #c88f2d;
+  }
+  60%{background-color: #c55911;}
+  100%{background-color: #753103;}
+} */
+.present .h1s{
+  display: flex;
+  margin: 0;
+ gap: 2%;
+ animation: h1ss linear 2 20s;
+  /* animation: couleurchange 1 12s linear ; */
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("paroisse.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  align-items: center;
+
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-title {
+  
+  padding-left: 2rem;
+  color: white;
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.6);
+  line-height: 1.1;
+  transform: translateY(40px);
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-title span {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1.2s ease-out forwards;
+}
+
+.hero-title span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.hero-title span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.hero-title span:nth-child(3) {
+  animation-delay: 2.1s;
+}
+
+.hero-title span:nth-child(3) {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
