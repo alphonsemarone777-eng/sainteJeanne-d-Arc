@@ -1,0 +1,614 @@
+/* =============================================
+   PALETTE UNIFIÉE — 4 couleurs seulement
+   ============================================= */
+:root {
+  --bleu:      #0a3d55;      /* bleu foncé profond */
+  --or:        #c9973a;      /* doré */
+  --creme:     #fdf8f0;      /* fond clair */
+  --bordeaux:  #6b1a2a;      /* bordeaux */
+  --blanc:     #ffffff;
+  --texte:     #1a1a1a;
+  --header-h:  auto;
+}
+
+/* =============================================
+   BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a3d55 0%, #102d47 100%);
+  color: var(--texte);
+  font-family: Georgia, 'Times New Roman', serif;
+  overflow-x: hidden;
+}
+
+/* =============================================
+   HEADER FIXE
+   ============================================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10,61,85,0.98);
+  border-bottom: 3px solid var(--or);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 14px 6px;
+  text-align: center;
+  color: var(--blanc);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 4px var(--or);
+  border: none;
+  width: 100%;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 8px 8px;
+}
+
+header nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  display: inline-block;
+  color: var(--or);
+  text-decoration: none;
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  padding: 5px 9px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  background: var(--or);
+  color: var(--bleu);
+}
+
+.jeannedarc {
+  color: var(--creme) !important;
+  font-weight: bold;
+}
+
+/* =============================================
+   ESPACEMENT SOUS LE HEADER FIXE
+   ============================================= */
+#enhaut {
+  margin: 0;
+  padding-top: 30px; /* réserve l'espace pour le header fixe */
+  text-align: center;
+  color: var(--or);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: 0.06em;
+  padding: 0 12px 10px;
+}
+
+/* =============================================
+   HERO / BANNIÈRE D'ACCUEIL
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  background-image: url("paroisse.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 2rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  transform: translateY(40px);
+}
+
+.hero-title span {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1.2s ease-out forwards;
+}
+
+.hero-title span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.hero-title span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.hero-title span:nth-child(3) {
+  animation-delay: 2.1s;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================================
+   SECTION IMAGES (bandeau animé)
+   ============================================= */
+.images {
+  display: block;
+  width: min(92%, 940px);
+  height: clamp(220px, 20vw, 320px);
+  margin: 10px auto 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 1rem;
+  background-color: rgba(255,255,255,0.08);
+  background-image: url("débutnoir.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+  animation: imgbg 30s linear infinite, imageFloat 14s ease-in-out infinite alternate;
+}
+
+@keyframes imgbg {
+  0%   { background-image: url("débutnoir.webp"); }
+  7%   { background-image: url("NOTRE DAME DAFRIQUE.jpg"); }
+  10%  { background-image: url("coeurs.jpg"); }
+  20%  { background-image: url("mereMarie.jpg"); }
+  30%  { background-image: url("jeearc.jpg"); }
+  40%  { background-image: url("martyrsouganda.jpg"); }
+  50%  { background-image: url("cathoo.webp"); }
+  60%  { background-image: url("servantetarcheveque.jpg"); }
+  84%  { background-image: url("veillépascale1.png"); }
+  87%  { background-image: url("fatick.webp"); }
+  90%  { background-image: url("servantsetléon.jpg"); }
+  100% { background-image: url("débutparicsh.jpg"); }
+}
+
+@keyframes imageFloat {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-6px) scale(1.01); }
+}
+
+/* =============================================
+   MENU PRINCIPAL (liens de navigation internes)
+   ============================================= */
+section main {
+  padding: 0 12px;
+}
+
+.ula {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 10px 10px 0;
+  margin: 0 auto;
+  max-width: 880px;
+}
+
+.lia {
+  border: 2px solid rgba(255,255,255,0.22);
+  border-radius: 1.2em;
+  list-style: none;
+  background: rgba(255,255,255,0.08);
+  color: var(--creme);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.88em 0.4em;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.lia a {
+  color: var(--creme);
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  display: block;
+}
+
+.lia:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}
+
+.lia:hover a {
+  color: var(--or);
+}
+
+/* =============================================
+   BOUTON RETOUR EN HAUT
+   ============================================= */
+.button {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  padding: 8px 10px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button a {
+  color: var(--creme);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background: var(--or);
+}
+
+.button:hover a {
+  color: var(--bleu);
+}
+
+/* =============================================
+   SECTIONS DE CONTENU
+   ============================================= */
+section {
+  margin: 0;
+  padding: 18px 14px 24px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* alternance fond clair / fond foncé */
+section:nth-child(odd)  { background: rgba(255,255,255,0.03); }
+section:nth-child(even) { background: rgba(255,255,255,0.06); }
+
+h3 {
+  display: inline-block;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--creme);
+  margin: 0 auto 12px;
+  padding: 10px 22px;
+  width: fit-content;
+  max-width: 90%;
+  background: rgba(10,61,85,0.88);
+  border: 1px solid rgba(201,151,58,0.35);
+  border-radius: 12px;
+}
+
+h5 {
+  text-align: center;
+  color: rgba(201,151,58,0.95);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  margin: 6px 0 14px;
+}
+
+p {
+  margin: 0 auto 18px;
+  max-width: 820px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  font-weight: 400;
+  font-style: normal;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--creme);
+  background: rgba(10,61,85,0.18);
+  text-align: justify;
+  line-height: 1.9;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+blockquote {
+  margin: 0 auto 18px;
+  max-width: 760px;
+  padding: 18px 22px;
+  border-left: 5px solid var(--or);
+  background: rgba(255,255,255,0.08);
+  color: var(--creme);
+  font-style: italic;
+  line-height: 1.9;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.repere ul,
+.inspiration ul {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  padding-left: 1.2rem;
+  color: var(--creme);
+}
+
+.repere li,
+.inspiration li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.priere p {
+  background: rgba(201,151,58,0.14);
+  border-color: rgba(201,151,58,0.22);
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  text-align: center;
+  padding: 20px 10px;
+  background: var(--bleu);
+  color: var(--creme);
+  margin-top: 20px;
+  border-top: 3px solid var(--or);
+  font-size: 1rem;
+}
+
+/* =============================================
+   RESPONSIVE — TABLETTE (max 900px)
+   ============================================= */
+@media (max-width: 900px) {
+  body {
+    padding-top: 130px;
+  }
+
+  .images {
+    width: 96%;
+    height: 240px;
+  }
+
+  .ula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .lia {
+    padding: 0.9em 0.35em;
+  }
+
+  header nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 8px 8px;
+    gap: 6px;
+  }
+
+  header nav ul li {
+    flex: 0 0 auto;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (max 600px)
+   ============================================= */
+@media (max-width: 600px) {
+  body {
+    padding-top: 130px;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    padding: 8px 8px 4px;
+  }
+
+  header nav ul {
+    gap: 3px;
+    padding: 3px 5px 6px;
+  }
+
+  header nav ul li a {
+    font-size: 0.82rem;
+    padding: 4px 6px;
+  }
+
+  .ula {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .lia {
+    padding: 0.55em 0.3em;
+  }
+
+  .lia a {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    left: 5px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — TRÈS PETIT (max 380px)
+   ============================================= */
+@media (max-width: 380px) {
+  header nav ul li a {
+    font-size: 0.8rem;
+    padding: 2px 4px;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — TABLETTE (max 900px)
+   ============================================= */
+@media (max-width: 900px) {
+  body {
+    padding-top: 130px;
+  }
+
+  header nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 4px 8px 8px;
+    gap: 6px;
+  }
+
+  header nav ul li {
+    flex: 0 0 auto;
+  }
+
+  .images {
+    height: 220px;
+    width: 96%;
+  }
+
+  .ula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .lia {
+    padding: 0.9em 0.35em;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (max 600px)
+   ============================================= */
+@media (max-width: 600px) {
+  body {
+    padding-top: 130px;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    padding: 8px 8px 4px;
+  }
+
+  header nav ul {
+    gap: 3px;
+    padding: 4px 6px 6px;
+  }
+
+  header nav ul li a {
+    font-size: 0.92rem;
+    padding: 4px 6px;
+  }
+
+  #enhaut {
+    padding-top: 110px;
+    font-size: 1rem;
+  }
+
+  .ula {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px 8px;
+  }
+
+  .lia {
+    padding: 0.65em 0.35em;
+  }
+
+  .lia a {
+    font-size: 1rem;
+  }
+
+  .images {
+    height: 180px;
+    width: 98%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    padding: 5px 12px;
+  }
+
+  p {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .button {
+    left: 4px;
+    padding: 6px 7px;
+    font-size: 0.75rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — TRÈS PETIT (max 380px)
+   ============================================= */
+@media (max-width: 380px) {
+  header nav ul li a {
+    font-size: 0.78rem;
+    padding: 2px 4px;
+  }
+
+  .ula {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    display: none;
+  }
+}

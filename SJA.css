@@ -2,12 +2,12 @@
    PALETTE UNIFIÉE — 4 couleurs seulement
    ============================================= */
 :root {
-  --bleu:      #0a3d55;
-  --or:        #c9973a;
-  --creme:     #fdf8f0;
-  --bordeaux:  #6b1a2a;
-  --blanc:     #ffffff;
-  --texte:     #1a1a1a;
+  --bleu:      #7F9DB8;
+  --or:        #C88F2D;
+  --creme:     #F8EFE2;
+  --bordeaux:  #6F2B1B;
+  --blanc:     #fffdfa;
+  --texte:     #25180f;
 }
 
 /* =============================================
@@ -26,8 +26,8 @@ body {
   padding: 0;
   padding-top: 100px; /* espace sous le header fixe */
   width: 100%;
-  background: linear-gradient(180deg, #fbf5e8 0%, #e7eff5 100%);
-  background-image: radial-gradient(circle at top left, rgba(201,143,44,0.12), transparent 20%), radial-gradient(circle at bottom right, rgba(10,61,85,0.08), transparent 18%);
+  background: linear-gradient(180deg, #f8efe2 0%, #e3c18b 100%);
+  background-image: radial-gradient(circle at top left, rgba(200,143,45,0.18), transparent 20%), radial-gradient(circle at bottom right, rgba(127,157,184,0.14), transparent 18%);
   color: var(--texte);
   font-family: Georgia, 'Times New Roman', serif;
   overflow-x: hidden;
@@ -42,7 +42,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(10,61,85,0.96);
+  background: rgba(168,93,43,0.96);
   
   border-bottom: 3px solid var(--or);
   box-shadow: 0 2px 14px rgba(0,0,0,0.35);
@@ -136,6 +136,73 @@ header nav ul li a:hover {
   padding: 0;
   border: none;
   background: none;
+}
+
+/* =============================================
+   HERO / BANNIÈRE D'ACCUEIL
+   ============================================= */
+.hero {
+  min-height: 100vh;
+  background-image: url("paroisse.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 2rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  transform: translateY(40px);
+}
+
+.hero-title span {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1.2s ease-out forwards;
+}
+
+.hero-title span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.hero-title span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.hero-title span:nth-child(3) {
+  animation-delay: 2.1s;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =============================================
