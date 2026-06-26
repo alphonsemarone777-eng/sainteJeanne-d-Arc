@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 :root {
   --creme: #f8efe2;
   --beige-chaud: #e3c18b;
@@ -144,20 +147,14 @@ header .header-sub {
 }
 
 .hero {
+  position: relative;
   min-height: 92vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
- 
-    overflow:hidden;
-
-    background-image:
-    linear-gradient(
-        rgba(8,18,30,.45),
-        rgba(8,18,30,.38)
-    ),
-    url("chatgptEglise.png");
+  overflow:hidden;
+  background-image:linear-gradient( rgba(8,18,30,.45), rgba(8,18,30,.38) ), url("chatgptEglise.png");
 
     background-size:cover;
     background-position:center 35%;
@@ -190,29 +187,19 @@ header .header-sub {
 .hero::after{
 
     content:"";
-
     position:absolute;
-
     inset:0;
-
-    background:linear-gradient(
-
-    to bottom,
-
-    transparent 60%,
-
-    rgba(0,0,0,.18)
-
-    );
-
+    background:linear-gradient( to bottom, transparent 60%,rgba(0,0,0,.18));
+    pointer-events: none;
+    z-index: 1;
 }
 
-Hero Content
+
 .hero-content{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
     width:min(720px,92%);
 
@@ -410,28 +397,12 @@ main {
 
 .presentation,
 .mission {
- 
+    position: relative;
     padding:70px;
-
     margin-top:70px;
-
     border-radius:35px;
-
-    background:
-
-    linear-gradient(
-
-    145deg,
-
-    rgba(255,255,255,.95),
-
-    rgba(249,243,232,.96)
-
-    );
-
-    box-shadow:
-
-    0 25px 60px rgba(0,0,0,.08);
+    background: linear-gradient(145deg, rgba(255,255,255,.95), rgba(249,243,232,.96));
+     box-shadow: 0 25px 60px rgba(0,0,0,.08);
 
 }
 
@@ -458,7 +429,7 @@ main h3{
     position:relative;
 
 }
-Puis
+
 
 main h3::after{
 
@@ -487,12 +458,12 @@ main h3::after{
     );
 
 }
-Espacement des cartes
 .presentation-grid{
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:35px;
-
 }
+
 
 .mission-card{
 
@@ -772,9 +743,6 @@ Espacement des cartes
     align-items: flex-start;
   }
 }
-/* Amelioration par copilot */
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
 body {
   font-family: 'Open Sans', sans-serif;
