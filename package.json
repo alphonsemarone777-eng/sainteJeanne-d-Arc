@@ -1,0 +1,8 @@
+{
+  "name": "sainte-jeanne-darc",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@getbrevo/brevo": "^2.5.0"
+  }
+}
