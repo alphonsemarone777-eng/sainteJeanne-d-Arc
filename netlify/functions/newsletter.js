@@ -63,12 +63,23 @@ export const handler = async (event) => {
       statusCode: 200,
       body: JSON.stringify({ message: "Inscription réussie" }),
     };
-  } catch (error) {
-    console.error("Brevo newsletter error:", error);
+//   } catch (error) {
+//     console.error("Brevo newsletter error:", error);
 
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Erreur lors de l’inscription" }),
-    };
-  }
+//     return {
+//       statusCode: 500,
+//       body: JSON.stringify({ message: "Erreur lors de l’inscription" }),
+//     };
+//   }
+} catch (error) {
+  console.error("Brevo newsletter error:");
+  console.error(error.response?.body || error);
+
+  return {
+    statusCode: 500,
+    body: JSON.stringify({
+      message: error.response?.body || error.message,
+    }),
+  };
+}
 };
