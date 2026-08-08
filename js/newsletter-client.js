@@ -7,7 +7,7 @@ if (form && emailInput && messageBox) {
     event.preventDefault();
 
     const email = emailInput.value.trim();
-    messageBox.textContent = "";
+    messageBox.textContent = "Inscription en cours...";
     messageBox.style.color = "";
 
     if (!email || !email.includes("@")) {
@@ -15,6 +15,8 @@ if (form && emailInput && messageBox) {
       messageBox.style.color = "#b91c1c";
       return;
     }
+
+    console.log("Newsletter submit", { email });
 
     try {
       const response = await fetch("/.netlify/functions/newsletter", {
@@ -25,13 +27,29 @@ if (form && emailInput && messageBox) {
         body: JSON.stringify({ email }),
       });
 
-      const data = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(data.message || "Erreur lors de l’inscription.");
+      let data = {};
+      try {
+        data = await response.json();
+      } catch {
+        data = {};
       }
 
-      messageBox.textContent = data.message || "Merci pour votre inscription !";
+      console.log("Newsletter response", { status: response.status, data });
+
+      if (!response.ok) {
+        const errorMessage =
+          typeof data.message === "string"
+            ? data.message
+            : typeof data === "string"
+              ? data
+              : JSON.stringify(data);
+throw new Error( `Erreur ${response.status}: ${errorMessage || "Erreur lors de l’inscription."}`); 
+      }
+
+      messageBox.textContent =
+        typeof data.message === "string"
+          ? data.message
+          : "Merci pour votre inscription !";
       messageBox.style.color = "#166534";
       form.reset();
     } catch (error) {
