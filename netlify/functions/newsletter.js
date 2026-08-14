@@ -49,7 +49,7 @@ export async function handler(event) {
 
     const createContact = new CreateContact();
     createContact.email = email;
-
+    createContact.updateEnabled = true;
     if (process.env.BREVO_LIST_ID) {
       createContact.listIds = [Number(process.env.BREVO_LIST_ID)];
     }
