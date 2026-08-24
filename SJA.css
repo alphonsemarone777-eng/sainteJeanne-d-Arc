@@ -65,6 +65,7 @@ header h1 {
   padding: 8px 12px 4px;
   text-align: center;
   color: var(--blanc);
+  color: antiquewhite;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: bold;
   text-transform: uppercase;
@@ -211,7 +212,7 @@ summary {
   padding: 0 2rem;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  line-height: 2.1;
+  line-height: 1.5;
   transform: translateY(40px);
 }
 
@@ -230,6 +231,8 @@ summary {
 .hero-title span:nth-child(2) {
   animation-delay: 1.2s;
   color: #e3c18b;
+  position: relative;
+  margin-left: 5%;
 }
 
 .hero-title span:nth-child(3) {
@@ -237,8 +240,18 @@ summary {
   font-size: 1.3em;
   font-weight: 700;
   color: #c9973a;
+  color: #1f7c9a;
   position: relative;
-  margin-top: 10%;
+  margin-top: 0%;
+  margin-left: 15%;
+  text-align: center;
+ 
+}
+.title-img{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 1em;
 }
 
 @keyframes reveal {
@@ -314,21 +327,13 @@ summary {
   font-size: clamp(0.95rem, 1.8vw, 1.1rem);
   font-weight: 600;
   color: var(--creme);
-  background: linear-gradient(
-    135deg,
-    rgba(201, 143, 44, 0.95),
-    rgba(13, 50, 68, 0.95)
-  );
+  background: linear-gradient(135deg, rgba(201, 143, 44, 0.95),rgba(13, 50, 68, 0.95));
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
 }
 
 .group-communaute p:nth-child(odd) {
-  background: linear-gradient(
-    135deg,
-    rgba(206, 7, 30, 0.95),
-    rgba(1, 58, 66, 0.95)
-  );
+  background: linear-gradient(135deg, rgba(206, 7, 30, 0.95), rgba(1, 58, 66, 0.95) );
 }
 
 .group-communaute p:nth-child(even) {
@@ -393,6 +398,13 @@ mark {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+/* .bigcontainer summary{
+  background-image: url(img/abbeleonet.jpg);
+  background-size:  contain;
+  background-repeat: no-repeat;
+  background-position: left;
+
+} */
 /* =============================================
    SECTION PAROISSE
    ============================================= */
@@ -422,9 +434,13 @@ mark {
   font-style: normal;
   text-decoration: none;
 }
-summary::after {
-  content: "👇";
+summary::after{
+  content: " Cliquez👇";
 }
+header summary::after {
+  content: "⌄";
+}
+
 .paroisse p {
   text-align: center;
   font-weight: bold;
@@ -483,16 +499,15 @@ summary::after {
 }
 
 .tag {
-  background: rgba(255, 255, 255, 0.1);
+  background: #b3462e;
+  background: #054960;
   color: var(--creme);
   border: 2px solid var(--or);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   font-weight: 700;
   padding: 5px 13px;
   border-radius: 999px;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  transition:background 0.2s,color 0.2s;
 }
 
 .tag a {
@@ -501,8 +516,8 @@ summary::after {
 }
 
 .tag:hover {
-  background: var(--or);
-  color: var(--bleu);
+  background-color: #1583eb;
+  color: var(--creme);
   border-color: var(--or);
 }
 
@@ -607,6 +622,7 @@ summary::after {
   display: block;
   text-align: center;
   color: var(--bleu);
+  color: #0b2f50;
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   background: var(--or);
   border-radius: 8px;
@@ -644,6 +660,7 @@ summary::after {
 
 .sacrements .card strong {
   color: var(--bleu);
+  color: #1583eb;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
@@ -1019,6 +1036,237 @@ summary::after {
   text-decoration: underline;
 }
 
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0b2f50, #124d78);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Décorations */
+
+.newsletter::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+}
+
+.newsletter::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 50%;
+    bottom: -130px;
+    left: -80px;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+    margin: 0 auto;
+
+    text-align: center;
+    color: white;
+}
+
+/* Icône */
+
+.newsletter-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d4af37;
+    color: #0b2f50;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Petit titre */
+
+.newsletter-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d4af37;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Grand titre */
+
+.newsletter h2 {
+    margin: 0 0 15px;
+
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+/* Description */
+
+.newsletter-content > p {
+    max-width: 620px;
+
+    margin: 0 auto 30px;
+
+    color: #e2ebf2;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Formulaire */
+
+.newsletter-form-row {
+    display: flex;
+    gap: 10px;
+
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* Champ email */
+
+.newsletter input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 16px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #222;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+.newsletter input::placeholder {
+    color: #777;
+}
+
+.newsletter input:focus {
+    border-color: #d4af37;
+
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* Bouton */
+
+.newsletter button {
+    padding: 16px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #d4af37;
+    color: #0b2f50;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.newsletter button:hover {
+    transform: translateY(-2px);
+
+    background: #e3c45b;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter button:active {
+    transform: translateY(0);
+}
+
+/* Message de retour */
+
+#newsletter-message {
+    min-height: 24px;
+
+    margin: 15px 0 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Petit texte */
+
+.newsletter small {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #b9cad7;
+
+    font-size: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .newsletter {
+        padding: 60px 18px;
+    }
+
+    .newsletter-form-row {
+        flex-direction: column;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .newsletter button {
+        padding: 15px;
+    }
+
+
+}
+
 /* =============================================
    ANIMATIONS
    ============================================= */
@@ -1055,15 +1303,10 @@ summary::after {
     margin-top: -11%;
     overflow-y: none;
   }
-  .hero-title span:nth-child(3) {
-    background-image: url(img/Jeannadarc.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right 64px;
-  }
   .bigcontainer {
     grid-template-columns: 1fr;
   }
+
   .groupcard {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1402,4 +1645,257 @@ summary::after {
   .info-card-body {
     padding: 1.2rem 1.2rem 1.4rem;
   }
+}
+
+/* =========================================
+   EN-TÊTE DE LA GALERIE
+========================================= */
+.gallery-header {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+/* Titre principal */
+.gallery-header h2 {
+    margin: 0 0 16px;
+    color: rgb(233, 169, 9);
+  background: antiquewhite;
+  border-radius: 30px;
+    font-weight: 800;
+    line-height: 1.15;
+    text-decoration: underline 2px solid;
+}
+/* Texte sous le titre */
+.gallery-header p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #123b66;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 600;
+}
+/* =========================================
+   GALERIE MASONRY
+========================================= */
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    columns: 3 280px;
+    column-gap: 14px;
+}
+/* =========================================
+   IMAGES
+========================================= */
+.gallery-item {
+    width: 100%;
+    margin: 0 0 14px;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #eee;
+    box-shadow:0 2px 8px  rgba(0, 0, 0, 0.08);
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition:transform 0.45s ease,filter 0.45s ease;
+}
+/* =========================================
+   EFFET AU SURVOL
+========================================= */
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+/* =========================================
+   PETITS DÉCALAGES
+========================================= */
+
+.gallery-item:nth-child(2n) {
+    transform: translateY(5px);
+}
+.gallery-item:nth-child(3n) {
+    transform: translateY(-3px);
+}
+.gallery-item:nth-child(5n) {
+    transform: translateY(8px);
+}
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        columns: 2 250px;
+        column-gap: 12px;
+    }
+    .gallery-item {
+        margin-bottom: 12px;
+    }
+}
+
+
+/* =========================================
+   TÉLÉPHONE
+========================================= */
+@media (max-width: 600px) {
+    .gallery-section {
+        padding: 65px 5%;
+    }
+    .gallery-header {
+        margin-bottom: 40px;
+    }
+    .gallery-header h2 {
+        font-size: 2rem;
+    }
+    .gallery-header p {
+        font-size: 0.95rem;
+    }
+    .gallery {
+        columns: 2;
+        column-gap: 10px;
+    }
+    .gallery-item {
+        margin-bottom: 10px;
+        border-radius: 7px;
+    }
+}
+/* =========================================
+   GALERIE MASONRY
+========================================= */
+
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    columns: 3 280px;
+    column-gap: 14px;
+}
+
+
+/* =========================================
+   CHAQUE IMAGE
+========================================= */
+
+.gallery-item {
+    width: 100%;
+
+    margin: 0 0 14px;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #eee;
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+}
+/* =========================================
+   IMAGES
+========================================= */
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition:transform 0.45s ease,filter 0.45s ease;
+}
+/* =========================================
+   PETIT EFFET AU SURVOL
+========================================= */
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+/* =========================================
+   PETITE VARIATION POUR LE CÔTÉ "EN VRAC"
+========================================= */
+
+.gallery-item:nth-child(2n) {
+    transform: translateY(5px);
+}
+.gallery-item:nth-child(3n) {
+    transform: translateY(-3px);
+}
+.gallery-item:nth-child(5n) {
+    transform: translateY(8px);
+}
+.gallery-item:nth-child(2n):hover,
+.gallery-item:nth-child(3n):hover,
+.gallery-item:nth-child(5n):hover {
+    transform: translateY(-4px);
+}
+
+.footer{
+    background:#0b1320;
+    color:white;
+    padding:70px 8% 20px;
+    border-top:2px solid #d4af37;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer h2{
+    color:#d4af37;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.footer h3{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer a{
+    color:#ddd;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer a:hover{
+    color:#d4af37;
+    transform:translateX(5px);
+
+}
+
+.footer-social{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.footer-bottom{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    text-align:center;
+    font-size:14px;
 }

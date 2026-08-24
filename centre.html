@@ -3,176 +3,194 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Centre de formation et vie paroissiale de Sainte Jeanne d'Arc de Fatick"
-    />
+    <meta name="description" content="Centre de formation et vie paroissiale de Sainte Jeanne d'Arc de Fatick" />
     <title>Centre de formation - Sainte Jeanne d'Arc</title>
     <link rel="stylesheet" href="centre.css" />
   </head>
   <body>
     <div class="top-banner">Diocèse de Dakar – Sénégal</div>
-
-    <header>
-      <img
-        src="img/logo-SJA2.jpg"
-        alt="logo du centre de formation de Sainte Jeanne d'Arc"
-        class="logo"
-        loading="lazy"
-      />
-      <div class="P">
-        <!-- <h1>Centre de Formation catéchétique et de promotion sociale</h1> -->
-        <p class="header-sub">Paroisse Sainte Jeanne d'Arc de Fatick</p>
-      </div>
+    <header class="site-header">
+      <h1>Sainte Jeanne d'Arc de Fatick</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="jeannedarc"> Accueil </a></li>
+          <li><a href="index.html#newsletter">Newsletter</a></li>
+         <li><a href="#Galerie">Galerie</a></li>
+          <li>
+            <details>
+              <summary>Menu du centre</summary>
+              <ul>
+                <li><a href="#presentation"> Qui sommes nous?</a></li>
+                <li><a href="#mission"> Notre Mission </a></li>
+                <li><a href="#"> </a> </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Vie paroissiale</summary>
+              <ul>
+                <li><a href="index.html#messe"> Messes </a></li>
+                <li><a href="index.html#paroisse"> Paroisse </a></li>
+                <li><a href="index.html#sacrements-body"> Sacrements </a> </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Plus</summary>
+              <ul>
+                <li><a href="index.html#projets"> Projets </a></li>
+                <li><a href="jeannedarc.html"> Vie de Jeanne d'Arc </a></li>
+                <li><a href="#suivre"> Nous suivre </a></li>
+                <li><a href="#contact"> Nous contacter </a></li>
+              </ul></details></li>
+          <li><a href="index.html#info"> Actus </a> </li>
+        </ul>
+      </nav>
     </header>
-
-    <nav class="navafterheader">
-      <ul>
-        <li><a href="centre.html" class="jeannedarc">Accueil</a></li>
-        <li>
-          <details>
-            <summary>Vie paroissiale</summary>
-            <ul class="submenu">
-              <li><a href="index.html#messe">Messes</a></li>
-              <li><a href="index.html#paroisse">Paroisse</a></li>
-              <li><a href="index.html#sacrements">Sacrements</a></li>
-              <li><a href="index.html#projets">Projets de la Paroisse</a></li>
-              <li><a href="index.html#suivre">suivre la paroisse</a></li>
-              <li><a href="index.html#info">Actus</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a href="#presentation">Qui sommes-nous ?</a></li>
-        <li><a href="#mission">Missions</a></li>
-        <li><a href="#suivre">suivre le centre</a></li>
-        <li><a href="#contact">contacter le centre</a></li>
-        <li><a href="#info">Actus du centre</a></li>
-        <li><a href="jeannedarc.html">vie de Jeanne d'arc</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Un lieu de foi, de formation et d’espérance</p>
-        <h1 class="hero-title">
-          <span>Bienvenue</span>
-          <span>au centre de formation</span>
-          <span>catéchétique et de promotion sociale</span>
-        </h1>
-        <p class="hero-text">
-          Un accompagnement fidèle pour les enfants, les familles et les jeunes
-          au service de la vie paroissiale.
-        </p>
+    <section class="header">
+      <img src="img/logoChorale.webp" alt="Logo du centre de formation de Sainte Jeanne d'Arc" class="logo" loading="lazy" />
+      <div class="header-content">
+        <p class="header-sub">Centre diocésain de formation catéchétique et de promotion sociale</p>
       </div>
     </section>
+   <section class="gallery-section" id="Galerie" title="Galerie d'images">
 
-    <section class="highlights">
-      <article class="highlight-card reveal">
-        <h3>Formation</h3>
+    <div class="gallery-header">
+        <span class="gallery-label">Nos activités</span>
+
+        <h2>Galerie du centre de formation</h2>
         <p>
-          Des parcours accessibles pour accompagner les fidèles dans leur chemin
-          de foi.
+            Découvrez en images les activités, les formations
+            et les moments vécus au sein de notre centre.
         </p>
-      </article>
-      <article class="highlight-card reveal">
-        <h3>Accompagnement</h3>
-        <p>
-          Un espace de dialogue, de partage et d’écoute au cœur de la paroisse.
-        </p>
-      </article>
-      <article class="highlight-card reveal">
-        <h3>Engagement</h3>
-        <p>
-          Des actions concrètes au service de la communauté et de la promotion
-          sociale.
-        </p>
-      </article>
+    </div>
+    <div class="gallery">
+        <figure class="gallery-item item-large">
+            <img src="img/biblight.jpeg" alt="Activité de formation au centre"></figure>
+        <figure class="gallery-item item-small">
+            <img src="img/R.jpg" alt="Jeunes participants à une formation" >
+        </figure>
+        <figure class="gallery-item item-medium">
+            <img src="img/coeurs.jpg" alt="Activité en groupe au centre" >
+        </figure>
+        <figure class="gallery-item item-tall">
+            <img src="img/début-coeur dejesus.jpg" alt="Moment de formation">
+        </figure>
+        <figure class="gallery-item item-wide">
+            <img src="img/OIP.jpg" alt="Participants réunis au centre">
+        </figure>
+        <figure class="gallery-item item-small">
+            <img src="img/piéta.jpeg" alt="Activité du centre de formation">
+        </figure>
+
+        <figure class="gallery-item item-medium">
+            <img src="img/SAVIOxACUTIS.png"
+    alt="Jeunes pendant une activité"
+            >
+        </figure>
+
+        <figure class="gallery-item item-large">
+            <img src="img/AGNUSDEI.jpg" alt="Groupe réuni lors d'une activité">
+        </figure>
+    </div>
+</section>
+<main>
+    <section class="presentation" id="presentation">
+        <h2>Qui sommes nous?</h2>
+        <h3>Le Centre diocésain de formation catéchétique et de promotion sociale </h3>
+     <article >
+     étant situé à Fatick dans la paroisse Sainte Jeanne d'arc , actuellement en réfection 
+     est un centre pensé ...  
+      <details>
+          <summary title="presentation du centre">Lire la suite</summary>
+          blablabla
+        </details>
+     <h5>Voilà donc la présentation du centre</h5>
+     </article>
     </section>
+    <section class="mission " id="mission">
+       <h2>Quelle est donc la mission du centre?</h2>
+        <h3>Le Centre diocésain de formation catéchétique et de promotion sociale </h3>
+        <article >
+        a pour mission... 
+         <details>
+          <summary title="mission du centre">Lire la suite</summary>
+          blablblabla
+        </details>
+        <h5>Voilà donc globalement notre mission. <br>
+        </h5>
+        </article>
+    </section>
+       
+    <section class="mission " id="mission">
+       <h2>???(titre)</h2>
+        <h3>Le Centre diocésain de formation catéchétique et de promotion sociale </h3>
+        <article title="mission du centre">
+        ... 
+         <details>
+          <summary>Lire la suite</summary>
+          blablabla
+        </details>
+        <h5>Voilà donc globalement  <br>
+        </h5>
+        </article>
+    </section>
+</main>
 
-    <main>
-      <section class="presentation" id="presentation">
-        <h3>Présentation</h3>
-        <div class="presentation-grid">
-          <article class="presentation-card reveal">
-            <img src="" alt="image du centre " />
-            <div class="presentation-copy">
-              <h4>Mission de proximité</h4>
-              <p>
-                Le centre accompagne les familles et les jeunes dans un cadre
-                chaleureux, pédagogique et spirituellement vivant.
-              </p>
-            </div>
-          </article>
-          <article class="presentation-card reveal">
-            <img src="" alt="image" />
-            <div class="presentation-copy">
-              <h4>Identité paroissiale</h4>
-              <p>
-                Chaque action porte la signature d’une communauté engagée,
-                attentive et tournée vers l’avenir.
-              </p>
-            </div>
-          </article>
-          <article class="presentation-card reveal">
-            <img src="img/chatgptEglise.png" alt="image de la paroisse" />
-            <div class="presentation-copy">
-              <h4>Un lieu de rencontre</h4>
-              <p>
-                Le centre devient un espace de transmission de valeurs, de foi,
-                de dignité et d’espoir.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
+<footer class="footer" id="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>
+                ✝ Sainte JEANNE D'ARC de Fatick
+            </h2>
+            <p>
+                Découvrir la paroisse SAINTE JEANNE D'ARC de Fatick et son centre de formation ainsi que son sanctuaire Marial à Mbinn Ndiouga
+            </p>
 
-      <section class="mission" id="mission">
-        <h3>Mission du centre</h3>
-        <div class="mission-card">
-          <article class="card reveal">
-            <div class="card-titre">Catéchése des enfants</div>
-            <div class="card-p">
-              Des séances adaptées à l’âge des enfants pour transmettre la foi
-              avec simplicité, clarté et profondeur.
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-titre">Formation des catéchistes</div>
-            <div class="card-p">
-              Des formations solides pour aider les animateurs à guider les
-              jeunes avec patience, pédagogie et conviction.
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-titre">Promotion sociale</div>
-            <div class="card-p">
-              Des initiatives concrètes au service des familles et de leur
-              autonomie dans une dynamique de solidarité.
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-titre">Accompagnement spirituel</div>
-            <div class="card-p">
-              Un soutien attentif pour les jeunes, les couples et les personnes
-              en recherche de sens dans leur vie.
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-titre">Vie communautaire</div>
-            <div class="card-p">
-              Des temps de partage et d’échange autour de la prière, de
-              l’éducation et du service au prochain.
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-titre">Avenir et solidarité</div>
-            <div class="card-p">
-              Un centre engagé dans des projets porteurs d’espoir pour la
-              communauté et les générations futures.
-            </div>
-          </article>
         </div>
-      </section>
-    </main>
+
+        <div class="footer-links">
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="">Centre de Formation</a>
+            <a href="">Sanctuaire marial de Mbinn Ndiouga</a>
+            <a href="#">Soutien</a>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="">Chorale</a>
+            <a href="">Ordre hospitalier Saint Jean de DIEU</a>
+            <a href="">Congrégation de l'immacullée conception</a>
+            <a href="#">Fréres  de Saint Gabriel</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>
+                Suivre le projet
+            </h3>
+            <p>
+                Un projet pour mettre en lumière
+                la paroisse Sainte Jeanne d'arc de Fatick ses mouvements, son centre de formation .
+            </p>
+
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            © 2026 PARVULUS MARIA - Tous droits réservés
+        </p>
+    </div>
+</footer>
   </body>
 </html>

@@ -15,10 +15,11 @@
               <ul>
                   <li><a href="index.html" class="jeannedarc">Accueil</a></li>
                  <li><a href="centre.html">Formation</a></li>
+                 <li><a href="#newsletter">Newsletter</a></li>
                   <li><details>
                  <summary>Vie paroissiale</summary>
-                  <li><a href="#messe">Messes</a></li>
-                  <li><a href="#paroisse">Paroisse</a></li>
+                  <li><a href="#grp-schedule">Messes</a></li>
+                  <li><a href="#parishstory">Paroisse</a></li>
                   <li><a href="#sacrements-body">Sacrements</a></li>
                   </details></li>
                   <li><details><summary>Plus</summary>
@@ -37,15 +38,57 @@
     <section class="hero">
         <h1 class="hero-title">
             <span>Bienvenue</span>
-            <span>à la paroisse</span>
+            <span>à la paroisse </span>
             <span>Sainte-Jeanne d'Arc de Fatick</span>
+           
         </h1>
     </section>
+     <section class="gallery-section" id="Galerie">
+
+    <div class="gallery-header">
+        <h2>Galerie de la paroisse</h2>
+        <p>Découvrez en images les activités, les formations et les moments vécus au sein de notre centre. </p>
+    </div>
+
+
+    <div class="gallery">
+
+        <figure class="gallery-item item-large">
+            <img src="img/débutfatick.webp" alt="Statue de Sainte Jeanne d'arc" >
+        </figure>
+        <figure class="gallery-item item-small">
+            <img src="img/servantsetléon.jpg"alt="Ancien Abbé Léon Diomy" >
+        </figure>
+        <figure class="gallery-item item-wide">
+            <img src="img/AbbéChristophe.webp" alt="Abbé Christophe Daimé Ndour">
+        </figure>
+        <figure class="gallery-item item-tall">
+            <img src="img/abbéJO.jpg" alt="Abbé Joseph Latyr" >
+        </figure>
+        <figure class="gallery-item item-large">
+            <img src="img/communion.jpg" alt="Communion 2026">
+        </figure>
+        <figure class="gallery-item item-tall">
+            <img src="img/confirmants.webp" alt="confirmation 2026">
+        </figure>
+        <figure class="gallery-item item-small">
+            <img src="img/départMarche.jpg" alt="Doyenné Fatick arrivé à poponguine">
+        </figure>
+        <figure class="gallery-item item-medium">
+            <img src="img/photodoyenné.jpg"  alt="Jeunes de fatick prêt pour la Marche">
+        </figure>
+        <figure class="gallery-item item-large">
+            <img src="img/vuedeloin.png" alt="L'eglise vue de loin" >
+        </figure>
+      
+    </div>
+</section>
+
   <section class="bigcontainer">
     <div class="messe" id="messe"><details>
-        <summary><h3>Horaire des Messes</h3></summary> 
-        <div class="group-schedule">
-           <div class="card"><h2>Dimanche</h2><p><samp>MESSE</samp> à 9h à la <span>Paroisse</span> [obligatoire]<br><mark>NB:</mark> Il y a une messe mensuelle pour les enfants animée par les enfants à la <span>Paroisse</span></p></div>
+        <summary><h3 >Horaire des Messes</h3></summary> 
+        <div class="group-schedule" id="groupe-schedule">
+           <div class="card" ><h2 id="grp-schedule">Dimanche</h2><p><samp>MESSE</samp> à 9h à la <span>Paroisse</span> [obligatoire]<br><mark>NB:</mark> Il y a une messe mensuelle pour les enfants animée par les enfants de la <span>Paroisse</span></p></div>
                <div class="card"><h2>Lundi, Mercredi et Vendredi</h2><p>messe:18h30 a la <span>Paroisse</span></p></div>
                <div class="card"><h2>Mardi,Jeudi et Samedi</h2><p>messe:6h30 à la <span>Paroisse</span></p></div>
                <div class="card"><h2>Vendredi</h2><p>chapelet divine miséricorde:15h,<br>Adoration-Eucharistique:17h à la <span>Paroisse</span></p></div>
@@ -62,7 +105,7 @@
         
           <p>La paroisse <a href="jeannarc.html">Sainte Jeanne d'arc de Fatick</a> est une communauté vivante et accueillante, ancrée dans le diocèse de Dakar. Elle rassemble des fidèles de tous âges autour de la foi, de la prière et du service.</p>
           <p>Dirigée par l'Abbé Joseph Latyr, notre paroisse est dynamique avec de nombreux groupes de prières et mouvements d'action catholique.</p>
-    <div class="parishstory">
+    <div class="parishstory" id="parishstory">
             <p>La paroisse a été fondée en ...</p>
            
         </div>
@@ -99,6 +142,10 @@
             <div class="card">
               <strong>Baptêmes, mariages, autres sacrements</strong>
               <span>Veuillez contacter le <a href="#">secrétariat paroissial</a></span>
+            </div>
+            <div class="card">
+              <strong>intentions de messe ,</strong>
+              <span>Allez directement voir la secrétaire à son bureau</span>
             </div>
           </div>
           <div class="note-importante">
@@ -148,6 +195,28 @@
 </section>
 
   
+<section class="newsletter" id="newsletter">
+    <div class="newsletter-content">
+
+        <div class="newsletter-icon">
+            ✉
+        </div>
+        <span class="newsletter-label">RESTONS EN CONTACT</span>
+        <h2>La Newsletter de la paroisse</h2>
+        <p>Recevez directement par e-mail les horaires des messes,les annonces, les événements et les nouvelles de la paroisse Sainte Jeanne d’Arc de Fatick.</p>
+        <form id="newsletter-form">
+            <div class="newsletter-form-row">
+                <input type="email" id="email"placeholder="Votre adresse e-mail"autocomplete="email"required>
+                <button type="submit"> S'abonner</button>
+            </div>
+        </form>
+        <p id="newsletter-message"></p>
+        <small>
+            Vous pouvez vous désabonner à tout moment.
+        </small>
+
+    </div>
+</section>
 
  <section id="info" class="info">
    <div class="info-wrapper">
@@ -158,7 +227,7 @@
      <div class="info-grid">
        <article class="info-card">
          <div class="info-img">
-           <img src="img/IoeFOyMarché.png" alt="Photo de l'annonce 1">
+           <img src="img/véillé5septembre.webp" alt="Photo de l'annonce 1">
          </div>
          <div class="info-card-body">
            <h3>Annonce principale</h3>
@@ -167,7 +236,7 @@
        </article>
        <article class="info-card">
          <div class="info-img">
-           <img src="img/JMJ1.webp" alt="Photo de l'annonce 2">
+           <img src="img/véillé5septembre.webp" alt="Photo de l'annonce 2">
          </div>
          <div class="info-card-body">
            <h3>Projet du sanctuaire</h3>
@@ -176,7 +245,7 @@
        </article>
        <article class="info-card">
          <div class="info-img">
-           <img src="img/poponguine.jpg" alt="Photo de l'annonce 3">
+           <img src="img/poponguine.jpgy" alt="Photo de l'annonce 3">
          </div>
          <div class="info-card-body">
            <h3>Centre de formation</h3>
@@ -217,7 +286,7 @@
       <p class="intro" id="intro">Des projets ambitieux comme</p> 
       <div class="tags">
       <span class="tag"><a href="">Construction du sanctuaire de Mbin Diounga</a></span>
-      <span class="tag"><a href="">Réfection du centre de formation</a></span>
+      <span class="tag"><a href="centre.html">Réfection du centre de formation</a></span>
    
       </div>
 <div class="container">
@@ -404,7 +473,7 @@
         </div>
       </div>
     </section>
-    <section class="newsletter">
+    <!-- <section class="newsletter">
     <h2>Newsletter de la paroisse</h2>
 
     <p>
@@ -426,8 +495,9 @@
     </form>
 
     <p id="newsletter-message"></p>
-</section>
-<footer class="contact" >
+</section> -->
+
+<section class="contact" >
 <p>© 2026 Paroisse Sainte Jeanne d’Arc de Fatick</p>
 <p>
 Contact de la paroisse :
@@ -436,6 +506,60 @@ Contact de la paroisse :
 <a href="https://wa.me/221789664920">WhatsApp</a>
 </p>
 <p>Vous souhaitez nous aider, rejoindre un groupe ou organiser un sacrement ? Écrivez-nous et nous vous répondrons rapidement.</p>
+</section>
+
+<footer class="footer" id="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>
+                ✝ Sainte JEANNE D'ARC de Fatick
+            </h2>
+            <p>
+                Découvrir la paroisse SAINTE JEANNE D'ARC de Fatick et son centre de formation ainsi que son sanctuaire Marial à Mbinn Ndiouga
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="index.html">Accueil</a>
+            <a href="">Centre de Formation</a>
+            <a href="">Sanctuaire marial de Mbinn Ndiouga</a>
+            <a href="#">Soutien</a>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="">Chorale</a>
+            <a href="">Ordre hospitalier Saint Jean de DIEU</a>
+            <a href="">Congrégation de l'immacullée conception</a>
+            <a href="#">Fréres  de Saint Gabriel</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>
+                Suivre le projet
+            </h3>
+            <p>
+                Un projet pour mettre en lumière
+                la paroisse Sainte Jeanne d'arc de Fatick ses mouvements, son centre de formation .
+            </p>
+
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            © 2026 PARVULUS MARIA - Tous droits réservés
+        </p>
+    </div>
 </footer>
 <script src="js/newsletter-client.js"></script>
 </body>
