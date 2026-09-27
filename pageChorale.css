@@ -13,6 +13,8 @@
   --ombre-legere: 0 10px 30px rgba(16, 42, 67, 0.08);
   --ombre: 0 20px 50px rgba(16, 42, 67, 0.12);
   --rayon: 20px;
+  --bleu-fonce:rgb(5, 78, 103);
+   --bordeaux: #6f2b1b;
 }
 * {
   box-sizing: border-box;
@@ -201,50 +203,72 @@ a {
   background: var(--or-clair);
 }
 .video-container {
-  width: 100%;          /* par défaut prend toute la largeur dispo */
-  max-width: 600px;     /* limite sur grand écran */
-  height: auto;
+  width: 100%;
+  max-width: 600px;
   border: 6px solid #123b66;
   border-radius: 20px;
   overflow: hidden;
-  margin: 20px auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  margin: 10px auto;
+  margin-left: 0;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 6px; 
+  padding: 0;
+  background-image: url(img/logoChorale.webp); 
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .ma-video {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: auto; 
+  aspect-ratio: 16 / 9; 
+  object-fit: contain;
   display: block;
+  margin: 0;
 }
-/* Mobile (petits écrans) */
-@media (max-width: 600px) {
-  .video-container {
-    max-width: 90%;   /* prend presque toute la largeur */
-    height: auto;
-  }
+.info {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #123b66;
+  background: #f0f0f0;
+  padding: 4px 0;
+  border-radius: 0 0 8px 8px;
+  margin-top: 8px; /* colle à la vidéo */
 }
-/* Tablette */
+/* --- TABLETTE (601px à 1024px) --- */
 @media (min-width: 601px) and (max-width: 1024px) {
   .video-container {
-    max-width: 400px;
-    height: auto;
-  }
-}
-/* PC (grands écrans) */
-@media (min-width: 1025px) {
-  .video-container {
-    max-width: 600px;
-    height: auto;
+    max-width: 90%;
+    grid-template-columns: 1fr 1fr; /* reste en 2 colonnes */
+    gap: 10px;
+    margin-bottom: 15px;
   }
 }
 
+/* --- TELEPHONE (max 600px) --- */
+@media (max-width: 600px) {
+  .video-container {
+    max-width: 95%;
+    grid-template-columns: 1fr; /* 1 seule colonne, une vidéo sous l'autre */
+    gap: 12px;
+    border-width: 4px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .ma-video {
+    aspect-ratio: 16 / 9; /* plus large sur téléphone c'est mieux */
+  }
+}
 .gallery-header {
     max-width: 720px;
     margin: 0 auto 50px;
     text-align: center;
 }
-/* Petit label au-dessus du titre */
 .gallery-label {
     display: inline-block;
     margin-bottom: 14px;
@@ -257,7 +281,6 @@ a {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
-/* Titre principal */
 .gallery-header h2 {
     margin: 0 0 16px;
     color: var(--chaud);
@@ -266,7 +289,6 @@ a {
     line-height: 1.15;
     text-decoration: underline 2px solid;
 }
-/* Texte sous le titre */
 .gallery-header p {
     max-width: 620px;
     margin: 0 auto;
@@ -275,8 +297,9 @@ a {
     line-height: 1.7;
     font-weight: 600;
 }
+
 /* =========================================
-   GALERIE MASONRY
+   PC : MANSORY
 ========================================= */
 .gallery {
     max-width: 1200px;
@@ -284,9 +307,6 @@ a {
     columns: 3 280px;
     column-gap: 14px;
 }
-/* =========================================
-   IMAGES
-========================================= */
 .gallery-item {
     width: 100%;
     margin: 0 0 14px;
@@ -294,7 +314,7 @@ a {
     overflow: hidden;
     border-radius: 8px;
     background: #eee;
-    box-shadow:0 2px 8px  rgba(0, 0, 0, 0.08);
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.08);
     transition:transform 0.3s ease,box-shadow 0.3s ease;
 }
 .gallery-item img {
@@ -302,168 +322,54 @@ a {
     width: 100%;
     height: auto;
     object-fit: cover;
-    transition:transform 0.45s ease,filter 0.45s ease;
+    transition:transform 0.45s ease;
 }
-/* =========================================
-   EFFET AU SURVOL
-========================================= */
 .gallery-item:hover {
     transform: translateY(-4px);
     box-shadow:0 10px 25px rgba(0, 0, 0, 0.15);
-    z-index: 2;
 }
+.gallery-item:hover img { transform: scale(1.04); }
 
-.gallery-item:hover img {
-    transform: scale(1.04);
-}
-/* =========================================
-   PETITS DÉCALAGES
-========================================= */
-
-.gallery-item:nth-child(2n) {
-    transform: translateY(5px);
-}
-.gallery-item:nth-child(3n) {
-    transform: translateY(-3px);
-}
-.gallery-item:nth-child(5n) {
-    transform: translateY(8px);
-}
-/* =========================================
-   TABLETTE
-========================================= */
-
-@media (max-width: 900px) {
-
-    .gallery {
-        columns: 2 250px;
-        column-gap: 12px;
-    }
-    .gallery-item {
-        margin-bottom: 12px;
-    }
-}
-
-
-/* =========================================
-   TÉLÉPHONE
-========================================= */
-@media (max-width: 600px) {
-    .gallery-section {
-        padding: 65px 5%;
-    }
-    .gallery-header {
-        margin-bottom: 40px;
-    }
-    .gallery-header h2 {
-        font-size: 2rem;
-    }
-    .gallery-header p {
-        font-size: 0.95rem;
-    }
-    .gallery {
-        columns: 2;
-        column-gap: 10px;
-    }
-    .gallery-item {
-        margin-bottom: 10px;
-        border-radius: 7px;
-    }
-}
-/* =========================================
-   GALERIE MASONRY
-========================================= */
-
-.gallery {
-    max-width: 1200px;
-    margin: 0 auto;
-    columns: 3 280px;
-    column-gap: 14px;
-}
-
-
-/* =========================================
-   CHAQUE IMAGE
-========================================= */
-
-.gallery-item {
-    width: 100%;
-
-    margin: 0 0 14px;
-    break-inside: avoid;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #eee;
-    box-shadow:0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease,box-shadow 0.3s ease;
-}
-/* =========================================
-   IMAGES
-========================================= */
-.gallery-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition:transform 0.45s ease,filter 0.45s ease;
-}
-/* =========================================
-   PETIT EFFET AU SURVOL
-========================================= */
-
-.gallery-item:hover {
-    transform: translateY(-4px);
-    box-shadow:0 10px 25px rgba(0, 0, 0, 0.15);
-    z-index: 2;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.04);
-}
-/* =========================================
-   PETITE VARIATION POUR LE CÔTÉ "EN VRAC"
-========================================= */
-
-.gallery-item:nth-child(2n) {
-    transform: translateY(5px);
-}
-.gallery-item:nth-child(3n) {
-    transform: translateY(-3px);
-}
-.gallery-item:nth-child(5n) {
-    transform: translateY(8px);
-}
+/* petite variation PC */
+.gallery-item:nth-child(2n) { transform: translateY(5px); }
+.gallery-item:nth-child(3n) { transform: translateY(-3px); }
+.gallery-item:nth-child(5n) { transform: translateY(8px); }
 .gallery-item:nth-child(2n):hover,
 .gallery-item:nth-child(3n):hover,
-.gallery-item:nth-child(5n):hover {
-    transform: translateY(-4px);
-}
-/* =========================================
-   TABLETTE
-========================================= */
+.gallery-item:nth-child(5n):hover { transform: translateY(-4px); }
 
+/* =========================================
+   TABLETTE + TELEPHONE : 1 IMAGE / LIGNE
+========================================= */
 @media (max-width: 900px) {
+    .gallery {
+        columns: 1 !important;
+        max-width: 420px;
+        margin: 0 auto;
+        height: auto !important;
+        position: static !important;
+    }
+    .gallery-item {
+        position: relative !important;
+        width: 92% !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin: 0 auto 18px !important;
+        z-index: auto !important;
+        opacity: 1 !important;
+    }
+    .gallery-item img{ height: auto !important; }
 
-    .gallery {
-        columns: 2 250px;
-        column-gap: 12px;
-    }
-    .gallery-item {
-        margin-bottom: 12px;
-    }
+    /* petit décalage organisé */
+    .gallery-item:nth-child(odd){ transform: translateX(-6px) rotate(-0.5deg) !important; }
+    .gallery-item:nth-child(even){ transform: translateX(6px) rotate(0.5deg) !important; }
 }
-/* =========================================
-   TÉLÉPHONE
-========================================= */
+
 @media (max-width: 600px) {
-    .gallery {
-        columns: 2;
-        column-gap: 10px;
-    }
-    .gallery-item {
-        margin-bottom: 10px;
-        border-radius: 7px;
-    }
+    .gallery { max-width: 360px; }
+    .gallery-item:nth-child(odd){ transform: translateX(-4px) rotate(-0.5deg) !important; }
+    .gallery-item:nth-child(even){ transform: translateX(4px) rotate(0.5deg) !important; }
 }
 /* =========================================================
    17. ANIMATIONS
@@ -704,4 +610,70 @@ summary:focus-visible {
     border-top:1px solid rgba(255,255,255,0.2);
     text-align:center;
     font-size:14px;
+}
+
+.group-schedule {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 860px;
+  margin: 1.5rem auto 0;
+  padding: 0 8px;
+}
+
+.group-schedule p {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 18px;
+  line-height: 1.7;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 600;
+  color: var(--creme);
+  background: linear-gradient(
+    135deg,
+    rgba(201, 143, 44, 0.95),
+    rgba(13, 50, 68, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.group-schedule p:nth-child(odd) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 197, 93, 0.95),
+    rgba(10, 61, 85, 0.95)
+  );
+}
+
+.group-schedule p:nth-child(even) {
+  background: linear-gradient(
+    135deg,
+    rgba(25, 98, 125, 0.95),
+    rgba(71, 128, 156, 0.95)
+  );
+}
+
+.group-schedule p::before {
+  content: "•";
+  display: inline-block;
+  margin-right: 0.7rem;
+  color: var(--or);
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.suivre {
+  border-left: 8px solid var(--or) ;
+  border: 1px solid var(--or);
+  border-left: 12px solid var(--or);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  font-style: italic;
+  padding: 14px 18px;
+  border-radius: 6px;
+  line-height: 1.6;
+  color: var(--or-clair);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--bleu);
 }

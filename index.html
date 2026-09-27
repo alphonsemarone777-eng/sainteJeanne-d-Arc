@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Paroisse Sainte Jeanne d'Arc de Fatick : messes, sacrements, projets et actualités du diocèse de Dakar.">
+    <meta name="description" content="Paroisse Sainte Jeanne d'Arc de Fatick du diocèse de Dakar: messes, sacrements, projets et actualités .">
     <title>Paroisse Sainte Jeanne d'Arc de Fatick</title>
     <link rel="stylesheet" href="SJA.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    
-     <header>
-                <h1>Sainte Jeanne d'arc de Fatick</h1>
-          <nav>
+    <div class="top-banner">Diocèse de Dakar – Sénégal</div>
+    <header class="site-header">
+      <h1>Sainte Jeanne d'Arc de Fatick</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="jeannedarc">Accueil</a></li>
+          <li><a href="centre.html">Formation</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+          
+          <li>
+            <details>
+              <summary>Vie paroissiale</summary>
               <ul>
-                  <li><a href="index.html" class="jeannedarc">Accueil</a></li>
-                 <li><a href="centre.html">Formation</a></li>
-                 <li><a href="#newsletter">Newsletter</a></li>
-                  <li><details>
-                 <summary>Vie paroissiale</summary>
-                  <li><a href="#grp-schedule">Messes</a></li>
-                  <li><a href="#parishstory">Paroisse</a></li>
-                  <li><a href="#sacrements-body">Sacrements</a></li>
-                  </details></li>
-                  <li><details><summary>Plus</summary>
-                  <li><a href="#projets">Projets</a></li>
-                   <li><a href="jeannedarc.html">Vie de Jeanne d'arc</a></li>
-                  <li><a href="#suivre">Nous suivre</a></li>
-                  <li><a href="#contact">Nous contacter</a></li>
-                  </details></li>
-                  <li><a href="#info">Actus</a></li>
-                  
-                    
-                  
-             </ul>
-          </nav>
-     </header>
+                <li><a href="#grp-schedule">Messes</a></li>
+                <li><a href="#parishstory">Paroisse</a></li>
+                <li><a href="#sacrements-body">Sacrements</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="pageChorale.html">La Chorale SJA</a></li>
+          <li>
+            <details>
+              <summary>Plus</summary>
+              <ul>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="jeannedarc.html">Vie de Jeanne d'Arc</a></li>
+                <li><a href="#suivre">Nous suivre</a></li>
+                <li><a href="#contact">Nous contacter</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#info">Actus</a></li>
+        </ul>
+      </nav>
+    </header>
     <section class="hero">
         <h1 class="hero-title">
             <span>Bienvenue</span>
@@ -47,7 +56,7 @@
 
     <div class="gallery-header">
         <h2>Galerie de la paroisse</h2>
-        <p>Découvrez en images les activités, les formations et les moments vécus au sein de notre centre. </p>
+        <p>Découvrez en images les activités, les formations et les moments vécus au sein de notre Paroisse. </p>
     </div>
 
 
@@ -106,6 +115,7 @@
           <p>La paroisse <a href="jeannarc.html">Sainte Jeanne d'arc de Fatick</a> est une communauté vivante et accueillante, ancrée dans le diocèse de Dakar. Elle rassemble des fidèles de tous âges autour de la foi, de la prière et du service.</p>
           <p>Dirigée par l'Abbé Joseph Latyr, notre paroisse est dynamique avec de nombreux groupes de prières et mouvements d'action catholique.</p>
     <div class="parishstory" id="parishstory">
+      <!-- A remplir -->
             <p>La paroisse a été fondée en ...</p>
            
         </div>
@@ -114,7 +124,7 @@
          </details>
   </section>
 <div class="group-communaute"><details><summary>
-            <h2>Communautés religieuses</h2></summary>
+            <h2>Communautés religieuses à Fatick</h2></summary>
             <p>Prêtres</p>
             <p>Congrégation des soeurs de l'immaculée conception</p>
             <p>Les frères de Saint Gabriel</p>
@@ -172,7 +182,6 @@
             <span class="tag">La légion de Marie</span>
           </div>
              </details>
-
     </div>
     <div class="mouvements">
   <details>
@@ -182,25 +191,19 @@
             <span class="tag">CEB saint Jean Paul II</span>
             <span class="tag">CEB saint Jean de DIEU</span>
             <span class="tag">CEB saint Jean Bosco</span>
-            <span class="tag">CEB sainte Bernadette</span>
             <span class="tag">CEB Notre dame de Cana</span>
+            <span class="tag">CEB sainte Bernadette</span>
             <span class="tag">CEB saint Augustin</span>
             <span class="tag">CEB Sainte Thérése de L'enfant Jésus</span>
             <span class="tag">CEB saint Paul</span>
-            <span class="tag">CEB saint Michel</span>
-          
+            <span class="tag">CEB saint Michel</span>  
           </div></details>
 </div>
           
 </section>
-
-  
 <section class="newsletter" id="newsletter">
     <div class="newsletter-content">
-
-        <div class="newsletter-icon">
-            ✉
-        </div>
+        <div class="newsletter-icon">✉</div>
         <span class="newsletter-label">RESTONS EN CONTACT</span>
         <h2>La Newsletter de la paroisse</h2>
         <p>Recevez directement par e-mail les horaires des messes,les annonces, les événements et les nouvelles de la paroisse Sainte Jeanne d’Arc de Fatick.</p>
@@ -222,39 +225,40 @@
    <div class="info-wrapper">
      <div class="info-header">
        <div class="info-title">Informations officielles de la Paroisse</div>
-       <!-- <p class="info-subtitle">Annonces, projets et actualités en un seul espace. Remplacez ces blocs par vos photos et paragraphes officiels.</p> -->
+
      </div>
      <div class="info-grid">
        <article class="info-card">
          <div class="info-img">
-           <img src="img/véillé5septembre.webp" alt="Photo de l'annonce 1">
+           <img src="img/" alt="Photo de l'annonce 1">
          </div>
          <div class="info-card-body">
            <h3>Annonce principale</h3>
            <p>Ajoutez ici une description claire et engageante. Cette carte peut présenter un événement, une collecte ou un message important.</p>
          </div>
        </article>
+           <!--A remplir -->
        <article class="info-card">
          <div class="info-img">
-           <img src="img/véillé5septembre.webp" alt="Photo de l'annonce 2">
+           <img src="img/" alt="Photo de l'annonce 2">
          </div>
          <div class="info-card-body">
            <h3>Projet du sanctuaire</h3>
-           <p>Le projet du sanctuaire de Mbin Ndiouga a recommencé. Remplacez ce texte par le montant acquis et le reste à financer.</p>
+           <p>Le projet du sanctuaire de Mbin Ndiouga a recommencé. "" ce texte par le montant acquis et le reste à financer".</p>
          </div>
        </article>
        <article class="info-card">
          <div class="info-img">
-           <img src="img/poponguine.jpgy" alt="Photo de l'annonce 3">
+           <img src="img/" alt="Photo de l'annonce 3">
          </div>
          <div class="info-card-body">
            <h3>Centre de formation</h3>
-           <p>Le projet du centre de formation est toujours en cours. Ajoutez les chiffres et détails pour informer vos visiteurs.</p>
+           <p>Le projet du centre de formation est toujours en cours.</p>
          </div>
        </article>
        <article class="info-card">
          <div class="info-img">
-           <img src="img/fetePatronale2026.jpg" alt="Photo de l'annonce 4">
+           <img src="img/" alt="Photo de l'annonce 4">
          </div>
          <div class="info-card-body">
            <h3>Courte publication</h3>
@@ -265,12 +269,12 @@
    </div>
  </section>
 
- 
-          <div class="group-schedule">
-            <p>La plupart des groupes se rencontrent le samedi à 16h.</p>
+ <!-- A remplir -->
+         <div class="group-schedule">
+             <!-- <p>La plupart des groupes se rencontrent le samedi à 16h.</p> -->
             <p>La petite chorale repéte juste après la messe du dimanche.</p>
             <p>Le Renouveau Charismatique se réunit dimanche à 15h et anime la messe du mercredi.</p>
-            <p>La Grande Chorale répète lundi , mercredi  vendredi et samedi à ...h </p>
+            <p>La Grande Chorale répète ... à ...h </p>
             <p>Adoration : 17h chaque vendredi, suivie du chapelet.</p>
           </div>
       <blockquote class="citation">
@@ -302,7 +306,7 @@
 
     <section class="suivre" id="suivre">
       <p>Restez informés de la vie de la paroisse et de nos actualités.</p>
-      <p><a href="https://www.facebook.com/profile.php?id=61583721135349">Facebook</a> | <a href="https://www.tiktok.com/@ste.jeanne.darc.fk.off?is_from_webapp=1&sender_device=pc">TikTok</a> | <a href="#"> YouTube</a></p>
+      <p><a href="https://www.facebook.com/profile.php?id=61583721135349">Facebook</a> | <a href="https://www.tiktok.com/@ste.jeanne.darc.fk.off?is_from_webapp=1&sender_device=pc">TikTok</a> |</p>
       <p>Pour des informations publiques et des annonces paroissiales, suivez-nous sur nos réseaux officiels.</p>
     </section>
 
@@ -325,9 +329,11 @@
         </form>
         <p> Scannez le code wave ci-dessous pour nous soutenir finacierement.</p>
         <div class="wave-note">
-          <p>Numéro Wave : <strong>+221 78 966 49 20</strong></p>
+          <!-- A remplir -->
+          <p>Numéro Wave : <strong>+221 7</strong></p>
           <div class="wave-qr">
-            <img src="img/waveALPHONSE.jpg" alt="QR Code Wave">
+            <!-- A remplir -->
+            <img src="img/" alt="QR Code Wave">
           </div>
           <button type="button" class="copy-number" onclick="navigator.clipboard.writeText('+221 78 966 49 20').then(function(){ alert('Numéro Wave copié !'); });">Copier le numéro</button>
         </div>
@@ -338,38 +344,28 @@
 <p>
 Contact de la paroisse :
 <a href="mailto:cellulecomstejeannedarc@gmail.com">Email</a> |
-<a href="tel:+221789664920">Téléphone</a> |
-<a href="https://wa.me/221789664920">WhatsApp</a>
+<!-- A remplir -->
+<a href="tel:+2217">Téléphone</a> |
+<a href="https://wa.me/2217">WhatsApp</a>
 </p>
-<p>Vous souhaitez nous aider, rejoindre un groupe ou organiser un sacrement ? Écrivez-nous et nous vous répondrons rapidement.</p>
+<p>Vous souhaitez nous aider, rejoindre un groupe ou organiser un sacrement ?.</p>
 </section>
 
 <footer class="footer" id="footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <h2>
-                ✝ Sainte JEANNE D'ARC de Fatick
-            </h2>
-            <p>
-                Découvrir la paroisse SAINTE JEANNE D'ARC de Fatick et son centre de formation ainsi que son sanctuaire Marial à Mbinn Ndiouga
-            </p>
-
+            <h2>✝ Sainte JEANNE D'ARC de Fatick</h2>
+            <p>Découvrir la paroisse SAINTE JEANNE D'ARC de Fatick et son centre de formation ainsi que son sanctuaire Marial à Mbinn Ndiouga</p>
         </div>
 
         <div class="footer-links">
             <h3>Navigation</h3>
             <a href="index.html">Accueil</a>
-            <a href="">Centre de Formation</a>
+            <a href="centre.html">Centre de Formation</a>
+            <!-- A remplir -->
             <a href="">Sanctuaire marial de Mbinn Ndiouga</a>
-            <a href="#">Soutien</a>
+            <a href="#contact">Soutien</a>
         </div>
-        <div class="footer-links">
-            <a href="">Chorale</a>
-            <a href="">Ordre hospitalier Saint Jean de DIEU</a>
-            <a href="">Congrégation de l'immacullée conception</a>
-            <a href="#">Fréres  de Saint Gabriel</a>
-        </div>
-
         <div class="footer-contact">
             <h3>Suivre le projet</h3>
             <p>
@@ -379,11 +375,18 @@ Contact de la paroisse :
 
             <div class="footer-social">
                 <a href="https://www.facebook.com/profile.php?id=61583721135349">Facebook</a>
-                <a href="#">YouTube</a>
                 <a href="https://www.tiktok.com/@ste.jeanne.darc.fk.off?is_from_webapp=1&sender_device=pc">TikTok</a>
-            </div>
+              </div>
         </div>
     </div>
+    <div class="footer-links a">
+            <h3 id="chorale">PLUS</h3>
+            <a href="https://www.tiktok.com/@chorale.ste.jeannedarcfk?is_from_webapp=1&sender_device=pc">Tiktok de Chorale Sainte Jeanne d'arc de Fatick</a>
+            <a href="https://youtube.com/@choralesaintejeannedarcfatick?si=FlUIkbC87hu236Lv">YouTube de la Chorale</a>
+              <h3>Créateur(s) de contenus liés à la Paroisse</h3>
+            <a href="https://www.tiktok.com/@abalivai07?is_from_webapp=1&sender_device=pc">Aba livaï</a>
+            
+        </div>
     <div class="footer-bottom">
         <p>
             © 2026 PARVULUS MARIA - Tous droits réservés
@@ -391,5 +394,6 @@ Contact de la paroisse :
     </div>
 </footer>
 <script src="js/newsletter-client.js"></script>
+<script src="menu.js"></script>
 </body>
 </html>
